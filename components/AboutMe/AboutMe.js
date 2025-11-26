@@ -67,12 +67,14 @@ const AboutMe = () => {
       {/* Aba de Certificados */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 mt-20">
                
-                <Card name='Certificado' desc=''></Card>
-                <Card name='Certificado' desc=''></Card>
-                <Card name='Certificado' desc=''></Card>
-                <Card name='Certificado' desc=''></Card>
-                <Card name='Certificado' desc=''></Card>
-                <Card name='Certificado' desc=''></Card>
+                <Card name='React: Desenvolvendo com JavaScript (Alura)' desc='' imagem='/imagens/Davi - Curso React_ desenvolvendo com JavaScript - Alura_pages-to-jpg-0001.jpg'></Card>
+                <Card name='Lógica de Programação: Explore Funções e Listas (Alura)' desc='' imagem='\imagens\Davi - Curso Lógica de programação_ explore funções e listas - Alura (1)_page-0001.jpg'></Card>
+                <Card name='Lógica de Programação: Mergulhe em Programação com JavaScript (Alura)' desc='' imagem='\imagens\Davi - Curso Lógica de programação_ mergulhe em programação com JavaScript - Alura_page-0001.jpg'></Card>
+                <Card name='Blockchain - Conceitos (FIAP)' desc='' imagem='\imagens\Blockchain - FIAP_page-0001.jpg'></Card>
+                <Card name='Design Thinking - Process (FIAP)' desc='' imagem='\imagens\Design Thinking - Process FIAP_page-0001.jpg'></Card>
+                <Card name='Formação Social e Sustentável (FIAP)' desc='' imagem='\imagens\Formação Social e Sustentável FIAP (1)_page-0001.jpg'></Card>
+                <Card name='Administração Estratégica (IFRS)' desc='' imagem='\imagens\Administração_Estratégica-Certificado_digital_2825252_pages-to-jpg-0001.jpg'></Card>
+                <Card name='Excel Básico (Bradesco)' desc='' imagem='\imagens\Excel Básico_page-0001.jpg'></Card>
                 
 
             </div>
