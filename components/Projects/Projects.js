@@ -25,7 +25,7 @@ const Projects = () => {
                 <Card name='AtmoGuard: Protótipo IoT' desc='Projeto de prototipagem em Engenharia de Software focado em monitoramento atmosférico e segurança, aplicando conceitos de IoT.' imagem='/imagens/AtmoGuard.png' link="https://github.com/DaviAlves06/AtmoGuard-Prototipo"></Card>
                 <Card name='Word Guess: Forca das frutas' desc='Jogo de adivinhação de palavras (forca) construído inteiramente em Python, focado em lógica de programação e manipulação de strings.' imagem='/imagens/Forca.png' link="https://github.com/DaviAlves06/Word-Guess"></Card>
                 <Card name='WorkFlow: Protótipo' desc='Protótipo de sistema de automação e gerenciamento de fluxo de trabalho, desenvolvido em Python para otimização de processos.' imagem='/imagens/Workflow.png' link="https://github.com/DaviAlves06/Workflow-Prototipo-Python-"></Card>
-                <Card name='Meu Portfólio' desc='Este projeto é a minha apresentação digital, construído com React e Tailwind CSS focado em design e responsividade.' imagem='/imagens/Portfolio.png' link="#"></Card>
+                <Card name='Meu Portfólio' desc='Este projeto é a minha apresentação digital, construído com React e Tailwind CSS focado em design e responsividade.' imagem='/imagens/Portfolio.png' link="https://github.com/DaviAlves06/portfolio"></Card>
 
             </div>
 
