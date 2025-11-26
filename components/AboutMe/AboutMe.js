@@ -46,13 +46,13 @@ const AboutMe = () => {
           {/* Card 1 */}
           <div className="group bg-gradient-to-br from-neutral-900 to-neutral-800 p-6 rounded-xl border border-purple-800/30 hover:border-purple-500 shadow-lg shadow-purple-900/10 hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1">
             <span className="block text-purple-400 font-bold text-xs tracking-wider uppercase mb-2 group-hover:text-purple-300">Front-end</span>
-            <p className="text-amber-50 text-lg font-medium">React, Node.js, Tailwind, Front (JS, HTML e CSS)</p>
+            <p className="text-amber-50 text-lg font-medium">React, Tailwind, Front (JS, HTML e CSS)</p>
           </div>
 
           {/* Card 2 */}
           <div className="group bg-gradient-to-br from-neutral-900 to-neutral-800 p-6 rounded-xl border border-purple-800/30 hover:border-purple-500 shadow-lg shadow-purple-900/10 hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1">
             <span className="block text-purple-400 font-bold text-xs tracking-wider uppercase mb-2 group-hover:text-purple-300">Back-end</span>
-            <p className="text-amber-50 text-lg font-medium">Python</p>
+            <p className="text-amber-50 text-lg font-medium">Python, Node.js</p>
           </div>
 
           {/* Card 3 */}
@@ -75,6 +75,8 @@ const AboutMe = () => {
                 <Card name='Formação Social e Sustentável (FIAP)' desc='' imagem='\imagens\Formação Social e Sustentável FIAP (1)_page-0001.jpg'></Card>
                 <Card name='Administração Estratégica (IFRS)' desc='' imagem='\imagens\Administração_Estratégica-Certificado_digital_2825252_pages-to-jpg-0001.jpg'></Card>
                 <Card name='Excel Básico (Bradesco)' desc='' imagem='\imagens\Excel Básico_page-0001.jpg'></Card>
+                <Card name='Inglês Iniciante: Comunicação Essencial (Alura)' desc='' imagem='\imagens\Davi.alves.santos190 - Modulo Inglês Iniciante - Comunicação essencial -_page-0001.jpg'></Card>
+
                 
 
             </div>
