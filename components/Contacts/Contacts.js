@@ -25,7 +25,7 @@ const Contacts = () => {
     
     return(
         
-        <section id="Contatos" className="flex flex-col w-full py-24 px-6 md:px-20 max-w-7xl mx-auto">
+        <section id="Contatos" className="flex flex-col w-full py-24 px-6 md:px-20 max-w-7xl mx-auto scroll-mt-24" data-aos='fade-up'>
 
             
             <div className="flex flex-col mb-16"> 

@@ -1,9 +1,39 @@
+'use client';
+
 import Card from "../Card/Card";
+import React, { useState } from "react";
 
 const AboutMe = () => {
+
+  const MAX_CERTIFICATES = 3;
+  const [numVisible, setNumVisible] = useState(MAX_CERTIFICATES);
+
+  const allCertificates = [
+    { name: 'React: Desenvolvendo com JavaScript (Alura)', desc: '', imagem: '/imagens/Davi - Curso React_ desenvolvendo com JavaScript - Alura_pages-to-jpg-0001.jpg' },
+        { name: 'Lógica de Programação: Explore Funções e Listas (Alura)', desc: '', imagem: '/imagens/Davi - Curso Lógica de programação_ explore funções e listas - Alura (1)_page-0001.jpg' },
+        { name: 'Lógica de Programação: Mergulhe em Programação com JavaScript (Alura)', desc: '', imagem: '/imagens/Davi - Curso Lógica de programação_ mergulhe em programação com JavaScript - Alura_page-0001.jpg' },
+        { name: 'Blockchain - Conceitos (FIAP)', desc: '', imagem: '/imagens/Blockchain - FIAP_page-0001.jpg' },
+        { name: 'Design Thinking - Process (FIAP)', desc: '', imagem: '/imagens/Design Thinking - Process FIAP_page-0001.jpg' },
+        { name: 'Formação Social e Sustentável (FIAP)', desc: '', imagem: '/imagens/Formação Social e Sustentável FIAP (1)_page-0001.jpg' },
+        { name: 'Administração Estratégica (IFRS)', desc: '', imagem: '/imagens/Administração_Estratégica-Certificado_digital_2825252_pages-to-jpg-0001.jpg' },
+        { name: 'Excel Básico (Bradesco)', desc: '', imagem: '/imagens/Excel Básico_page-0001.jpg' },
+        { name: 'Inglês Iniciante: Comunicação Essencial (Alura)', desc: '', imagem: '/imagens/Davi.alves.santos190 - Modulo Inglês Iniciante - Comunicação essencial -_page-0001.jpg' }
+  ]
+
+  const isViewingAll = numVisible === allCertificates.length;
+  const showToggleButton = allCertificates.length > MAX_CERTIFICATES;
+
+  const handleToggle = () => {
+        if (isViewingAll) {
+            setNumVisible(MAX_CERTIFICATES); // Volta para o limite
+        } else {
+            setNumVisible(allCertificates.length); // Mostra todos
+        }
+    }
+
   return (
    
-    <section id="Sobre" className="flex flex-col w-full py-24 px-6 md:px-20 max-w-7xl mx-auto">
+    <section id="Sobre" className="flex flex-col w-full py-24 px-6 md:px-20 max-w-7xl mx-auto scroll-mt-24" data-aos='fade-up'>
       
     
       <div className="mb-16">
@@ -44,20 +74,20 @@ const AboutMe = () => {
           <h3 className="text-3xl font-semibold text-amber-50 mb-4">Foco Técnico</h3>
           
           {/* Card 1 */}
-          <div className="group bg-gradient-to-br from-neutral-900 to-neutral-800 p-6 rounded-xl border border-purple-800/30 hover:border-purple-500 shadow-lg shadow-purple-900/10 hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1">
-            <span className="block text-purple-400 font-bold text-xs tracking-wider uppercase mb-2 group-hover:text-purple-300">Front-end</span>
+          <div className="group bg-gradient-to-br from-neutral-900 to-neutral-800 p-6 rounded-xl border border-purple-800/30 hover:border-purple-500 shadow-lg shadow-purple-900/10 hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1 active:border-purple-500 active:shadow-purple-500/20 active:-translate-y-1">
+            <span className="block text-purple-400 font-bold text-xs tracking-wider uppercase mb-2 group-hover:text-purple-300 group-active:text-purple-300">Front-end</span>
             <p className="text-amber-50 text-lg font-medium">React, Tailwind, Front (JS, HTML e CSS)</p>
           </div>
 
           {/* Card 2 */}
-          <div className="group bg-gradient-to-br from-neutral-900 to-neutral-800 p-6 rounded-xl border border-purple-800/30 hover:border-purple-500 shadow-lg shadow-purple-900/10 hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1">
-            <span className="block text-purple-400 font-bold text-xs tracking-wider uppercase mb-2 group-hover:text-purple-300">Back-end</span>
+          <div className="group bg-gradient-to-br from-neutral-900 to-neutral-800 p-6 rounded-xl border border-purple-800/30 hover:border-purple-500 shadow-lg shadow-purple-900/10 hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1 active:border-purple-500 active:shadow-purple-500/20 active:-translate-y-1">
+            <span className="block text-purple-400 font-bold text-xs tracking-wider uppercase mb-2 group-hover:text-purple-300 group-active:text-purple-300">Back-end</span>
             <p className="text-amber-50 text-lg font-medium">Python, Node.js</p>
           </div>
 
           {/* Card 3 */}
-          <div className="group bg-gradient-to-br from-neutral-900 to-neutral-800 p-6 rounded-xl border border-purple-800/30 hover:border-purple-500 shadow-lg shadow-purple-900/10 hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1">
-            <span className="block text-purple-400 font-bold text-xs tracking-wider uppercase mb-2 group-hover:text-purple-300">Metodologias</span>
+          <div className="group bg-gradient-to-br from-neutral-900 to-neutral-800 p-6 rounded-xl border border-purple-800/30 hover:border-purple-500 shadow-lg shadow-purple-900/10 hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1 active:border-purple-500 active:shadow-purple-500/20 active:-translate-y-1">
+            <span className="block text-purple-400 font-bold text-xs tracking-wider uppercase mb-2 group-hover:text-purple-300 group-active:text-purple-300">Metodologias</span>
             <p className="text-amber-50 text-lg font-medium">Design Thinking (UX/UI), Agile</p>
           </div>
         </div>
@@ -66,20 +96,43 @@ const AboutMe = () => {
 
       {/* Aba de Certificados */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 mt-20">
-               
-                <Card name='React: Desenvolvendo com JavaScript (Alura)' desc='' imagem='/imagens/Davi - Curso React_ desenvolvendo com JavaScript - Alura_pages-to-jpg-0001.jpg'></Card>
-                <Card name='Lógica de Programação: Explore Funções e Listas (Alura)' desc='' imagem='\imagens\Davi - Curso Lógica de programação_ explore funções e listas - Alura (1)_page-0001.jpg'></Card>
-                <Card name='Lógica de Programação: Mergulhe em Programação com JavaScript (Alura)' desc='' imagem='\imagens\Davi - Curso Lógica de programação_ mergulhe em programação com JavaScript - Alura_page-0001.jpg'></Card>
-                <Card name='Blockchain - Conceitos (FIAP)' desc='' imagem='\imagens\Blockchain - FIAP_page-0001.jpg'></Card>
-                <Card name='Design Thinking - Process (FIAP)' desc='' imagem='\imagens\Design Thinking - Process FIAP_page-0001.jpg'></Card>
-                <Card name='Formação Social e Sustentável (FIAP)' desc='' imagem='\imagens\Formação Social e Sustentável FIAP (1)_page-0001.jpg'></Card>
-                <Card name='Administração Estratégica (IFRS)' desc='' imagem='\imagens\Administração_Estratégica-Certificado_digital_2825252_pages-to-jpg-0001.jpg'></Card>
-                <Card name='Excel Básico (Bradesco)' desc='' imagem='\imagens\Excel Básico_page-0001.jpg'></Card>
-                <Card name='Inglês Iniciante: Comunicação Essencial (Alura)' desc='' imagem='\imagens\Davi.alves.santos190 - Modulo Inglês Iniciante - Comunicação essencial -_page-0001.jpg'></Card>
-
-                
-
+                {allCertificates
+                    // Filtra a lista para mostrar apenas o número definido por 'numVisible'
+                    .slice(0, numVisible)
+                    .map((cert, index) => (
+                        <Card 
+                            key={index}
+                            name={cert.name} 
+                            desc={cert.desc} 
+                            imagem={cert.imagem}
+                            // Adicionamos um delay crescente para os novos cards, se desejar
+                            data-aos='fade-up' 
+                            data-aos-delay={index >= MAX_CERTIFICATES ? ((index - MAX_CERTIFICATES) * 50) : 0}
+                        />
+                    ))
+                }
             </div>
+
+      {showToggleButton && (
+                <div className="flex justify-center mt-12">
+                    <button
+                        onClick={handleToggle}
+                        className="flex items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg shadow-purple-600/50 transition-all duration-300 transform active:scale-105 active:bg-purple-700 hover:scale-105"
+                    >
+                        {isViewingAll ? (
+                            <>
+                                <span>Ver Menos</span>
+                                <svg className="w-5 h-5 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7"></path></svg>
+                            </>
+                        ) : (
+                            <>
+                                <span>Ver Todos ({allCertificates.length - MAX_CERTIFICATES} a mais)</span>
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </>
+                        )}
+                    </button>
+                </div>
+            )}
 
       
       <div className="mt-32 border-t border-purple-900/30 pt-10"></div>
