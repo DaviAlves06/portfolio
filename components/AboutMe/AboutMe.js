@@ -3,10 +3,12 @@
 import Card from "../Card/Card";
 import React, { useState } from "react";
 
-const AboutMe = () => {
+const AboutMe = (props) => {
 
   const MAX_CERTIFICATES = 3;
-  const [numVisible, setNumVisible] = useState(MAX_CERTIFICATES);
+  const [isViewingAll, setIsViewingAll] = useState(false);
+
+  const certificateContainerClasses = isViewingAll ? "max-h-[5000px] opacity-100": "max-h-0 opacity-0";
 
   const allCertificates = [
     { name: 'React: Desenvolvendo com JavaScript (Alura)', desc: '', imagem: '/imagens/Davi - Curso React_ desenvolvendo com JavaScript - Alura_pages-to-jpg-0001.jpg' },
@@ -20,20 +22,15 @@ const AboutMe = () => {
         { name: 'Inglês Iniciante: Comunicação Essencial (Alura)', desc: '', imagem: '/imagens/Davi.alves.santos190 - Modulo Inglês Iniciante - Comunicação essencial -_page-0001.jpg' }
   ]
 
-  const isViewingAll = numVisible === allCertificates.length;
-  const showToggleButton = allCertificates.length > MAX_CERTIFICATES;
+  const allExtraCertificates = allCertificates.slice(MAX_CERTIFICATES);
 
   const handleToggle = () => {
-        if (isViewingAll) {
-            setNumVisible(MAX_CERTIFICATES); // Volta para o limite
-        } else {
-            setNumVisible(allCertificates.length); // Mostra todos
-        }
-    }
+    setIsViewingAll(!isViewingAll);
+  };
 
   return (
    
-    <section id="Sobre" className="flex flex-col w-full py-24 px-6 md:px-20 max-w-7xl mx-auto scroll-mt-24" data-aos='fade-up'>
+    <section id="Sobre" className="flex flex-col w-full py-24 px-6 md:px-20 max-w-7xl mx-auto scroll-mt-24" {...props} data-aos='fade-up'>
       
     
       <div className="mb-16">
@@ -95,44 +92,56 @@ const AboutMe = () => {
       </div>
 
       {/* Aba de Certificados */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 mt-20">
-                {allCertificates
-                    // Filtra a lista para mostrar apenas o número definido por 'numVisible'
-                    .slice(0, numVisible)
-                    .map((cert, index) => (
-                        <Card 
-                            key={index}
-                            name={cert.name} 
-                            desc={cert.desc} 
-                            imagem={cert.imagem}
-                            // Adicionamos um delay crescente para os novos cards, se desejar
-                            data-aos='fade-up' 
-                            data-aos-delay={index >= MAX_CERTIFICATES ? ((index - MAX_CERTIFICATES) * 50) : 0}
-                        />
-                    ))
-                }
-            </div>
+      <h3 className="text-3xl md:text-4xl font-bold text-amber-50 mb-8 mt-16 tracking-tight">
+          Certificados
+      </h3>
 
-      {showToggleButton && (
-                <div className="flex justify-center mt-12">
-                    <button
-                        onClick={handleToggle}
-                        className="flex items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg shadow-purple-600/50 transition-all duration-300 transform active:scale-105 active:bg-purple-700 hover:scale-105"
-                    >
-                        {isViewingAll ? (
-                            <>
-                                <span>Ver Menos</span>
-                                <svg className="w-5 h-5 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7"></path></svg>
-                            </>
-                        ) : (
-                            <>
-                                <span>Ver Todos ({allCertificates.length - MAX_CERTIFICATES} a mais)</span>
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </>
-                        )}
-                    </button>
-                </div>
-            )}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-stretch">
+        {allCertificates.slice(0, MAX_CERTIFICATES).map((cert, index) => (
+          <Card 
+            key={index} 
+            name={cert.name} 
+            desc={cert.desc} 
+            imagem={cert.imagem}
+          />
+        ))}
+      </div>
+
+      <div 
+        className={`grid grid-cols-1 lg:grid-cols-3 gap-12 pt-12 ${certificateContainerClasses} overflow-hidden transition-all duration-1000 ease-in-out items-stretch`}
+        style={{ transitionProperty: 'max-height, opacity' }}
+      >
+        {allExtraCertificates.map((cert, index) => (
+          <Card 
+            key={index + MAX_CERTIFICATES} 
+            name={cert.name} 
+            desc={cert.desc} 
+            imagem={cert.imagem}
+          />
+        ))}
+      </div>
+
+      {/* Botão de Toggle */}
+      {allCertificates.length > MAX_CERTIFICATES && (
+        <div className="flex justify-center mt-12">
+            <button
+                onClick={handleToggle}
+                className="flex items-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg shadow-purple-600/50 transition-all duration-300 transform active:scale-105 active:bg-purple-700 hover:scale-105"
+            >
+                {isViewingAll ? (
+                    <>
+                        <span>Ver Menos</span>
+                        <svg className="w-5 h-5 transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </>
+                ) : (
+                    <>
+                        <span>Ver Todos ({allExtraCertificates.length} a mais)</span>
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </>
+                )}
+            </button>
+        </div>
+      )}
 
       
       <div className="mt-32 border-t border-purple-900/30 pt-10"></div>
