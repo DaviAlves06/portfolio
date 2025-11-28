@@ -41,7 +41,7 @@ export default function Home() {
               
               {/* Imagem de Perfil */}
               <img
-                  src="/imagens/WhatsApp Image 2025-11-26 at 07.54.53.jpeg" 
+                  src="\imagens\WhatsApp Image 2025-11-28 at 07.42.51.jpeg" 
                   alt="Davi Alves - Foto de Perfil" 
                   className="rounded-full border-4 border-purple-500 h-40 w-40 sm:h-52 sm:w-52 object-cover 
                             shadow-2xl shadow-purple-500/50 hover:shadow-3xl hover:shadow-purple-500 active:shadow-3xl active:shadow-purple-500  
