@@ -6,6 +6,8 @@
 
 Bem-vindo ao repositório do meu portfólio pessoal. Este projeto é a minha apresentação digital e uma vitrine dos meus principais trabalhos e habilidades em desenvolvimento de software.
 
+Link: https://portfolio-three-beige-91.vercel.app/
+
 ## 🌟 Visão Geral e Destaques
 
 O portfólio é construído com foco em **performance**, **responsividade** e um design moderno.
