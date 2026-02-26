@@ -2,6 +2,7 @@
 
 import Card from "../Card/Card";
 import React, { useState } from "react";
+import Projects from "../Projects/Projects";
 
 const AboutMe = (props) => {
 
@@ -91,10 +92,18 @@ const AboutMe = (props) => {
 
       </div>
 
+      <div className="mt-32 border-t border-purple-900/30 pt-10"></div>
+
+    <Projects data-aos='fade-up' data-aos-delay='0' />
+
       {/* Aba de Certificados */}
-      <h3 className="text-3xl md:text-4xl font-bold text-amber-50 mb-8 mt-16 tracking-tight">
-          Certificados
-      </h3>
+      <div className="flex flex-col mb-16">
+        <h2 className="text-5xl md:text-6xl font-bold text-amber-50 mb-4 tracking-tight">
+            Certificados
+        </h2>
+
+        <div className="h-1.5 w-32 bg-gradient-to-r from-purple-600 to-purple-900 rounded-full"></div>
+      </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-stretch">
         {allCertificates.slice(0, MAX_CERTIFICATES).map((cert, index) => (

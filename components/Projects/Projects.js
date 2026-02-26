@@ -3,9 +3,9 @@ import Card from "../Card/Card"
 const Projects = () => {
     return(
         
-        <section 
+       <div 
             id="Projetos" 
-            className="flex flex-col w-full py-24 px-6 md:px-20 max-w-7xl mx-auto scroll-mt-24"
+            className="flex flex-col w-full py-24 scroll-mt-24"
             data-aos='fade-up'
         >
             
@@ -32,7 +32,7 @@ const Projects = () => {
 
             <div className="mt-32 border-t border-purple-900/30 pt-10"></div>
 
-        </section>
+        </div>
     )
 }
 
