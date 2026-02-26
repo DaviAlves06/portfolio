@@ -10,11 +10,11 @@ const Card = ({name, desc, imagem, link}) => {
             {/* Imagem */}
             <img 
               src={imagem} 
-              className="w-full aspect-[4/3] object-cover rounded-md mb-4 border border-purple-800/50" 
+              className="w-full aspect-video object-contain bg-neutral-950 rounded-md mb-4 border border-purple-800/50" 
               alt={name || "Imagem do projeto"} 
             />
 
-            <div className="flex-1 flex flex-col justify-end">
+            <div className="flex-1 flex flex-col flex-grow">
                 {/* Título */}
                 <h3 className="text-2xl font-bold text-amber-50 mb-2 group-hover:text-purple-400 group-active:text-purple-400 transition-colors">
                     {name}

@@ -47,6 +47,7 @@ export default function Home() {
                             shadow-2xl shadow-purple-500/50 hover:shadow-3xl hover:shadow-purple-500 active:shadow-3xl active:shadow-purple-500  
                             transition-all duration-300 transform hover:scale-105 
                             motion-safe:animate-pulse-slow lg:mt-6 active:scale-105" 
+                  suppressHydrationWarning
               />
           </div>
 

@@ -19,8 +19,9 @@ const Projects = () => {
             </div>
 
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
                
+                <Card name='Agente Farmâceutico IA' desc='Aplicação de IA que utiliza processamento de dados para gerenciar o inventário e a validação de prescrições, integrando serviços de saúde com algoritmos de assistência inteligente.' imagem='/imagens/ai-pharmacy.png' link="https://github.com/DaviAlves06/ai-pharmacy-agent" data-aos='fade-up' data-aos-delay='0'></Card>
                 <Card name='Jogo do Número Secreto' desc='Jogo de adivinhação que demonstra o domínio de JavaScript Vanilla e manipulação da DOM.' imagem='/imagens/NumeroSecreto.png' link="https://github.com/DaviAlves06/Jogo-do-Numero-Secreto" data-aos='fade-up' data-aos-delay='0'></Card>
                 <Card name='Organo: Gestão de Times' desc='Aplicação construída em React que permite a criação e visualização dinâmica de times e colaboradores. Foco em componentização e estados.' imagem='/imagens/Organo.png' link="https://github.com/DaviAlves06/Organo" data-aos='fade-up' data-aos-delay='100'></Card>
                 <Card name='AtmoGuard: Protótipo IoT' desc='Projeto de prototipagem em Engenharia de Software focado em monitoramento atmosférico e segurança, aplicando conceitos de IoT.' imagem='/imagens/AtmoGuard.png' link="https://github.com/DaviAlves06/AtmoGuard-Prototipo" data-aos='fade-up' data-aos-delay='200'></Card>

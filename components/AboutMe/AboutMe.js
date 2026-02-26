@@ -12,15 +12,20 @@ const AboutMe = (props) => {
   const certificateContainerClasses = isViewingAll ? "max-h-[5000px] opacity-100": "max-h-0 opacity-0";
 
   const allCertificates = [
-    { name: 'React: Desenvolvendo com JavaScript (Alura)', desc: '', imagem: '/imagens/Davi - Curso React_ desenvolvendo com JavaScript - Alura_pages-to-jpg-0001.jpg' },
+        { name: 'Arquiteturas RAG com LLMs (Alura)', desc: '', imagem: '/imagens/Certificado Arquiteturas RAG com LLMs_page-0001.jpg' },
+        { name: 'Inglês Iniciante: Comunicação Essencial (Alura)', desc: '', imagem: '/imagens/Davi.alves.santos190 - Modulo Inglês Iniciante - Comunicação essencial -_page-0001.jpg' },
+        { name: 'React: Desenvolvendo com JavaScript (Alura)', desc: '', imagem: '/imagens/Davi - Curso React_ desenvolvendo com JavaScript - Alura_pages-to-jpg-0001.jpg' },
         { name: 'Lógica de Programação: Explore Funções e Listas (Alura)', desc: '', imagem: '/imagens/Davi - Curso Lógica de programação_ explore funções e listas - Alura (1)_page-0001.jpg' },
         { name: 'Lógica de Programação: Mergulhe em Programação com JavaScript (Alura)', desc: '', imagem: '/imagens/Davi - Curso Lógica de programação_ mergulhe em programação com JavaScript - Alura_page-0001.jpg' },
-        { name: 'Blockchain - Conceitos (FIAP)', desc: '', imagem: '/imagens/Blockchain - FIAP_page-0001.jpg' },
+        { name: 'Imersão de Dados com Python (Alura)', desc: '', imagem: '/imagens/Davi - Imersão de Dados com Python_page-0001.jpg' },
         { name: 'Design Thinking - Process (FIAP)', desc: '', imagem: '/imagens/Design Thinking - Process FIAP_page-0001.jpg' },
+        { name: 'Blockchain - Conceitos (FIAP)', desc: '', imagem: '/imagens/Blockchain - FIAP_page-0001.jpg' },
         { name: 'Formação Social e Sustentável (FIAP)', desc: '', imagem: '/imagens/Formação Social e Sustentável FIAP (1)_page-0001.jpg' },
+        { name: 'Workshop Figma com IA (EBAC)', desc: '', imagem: '/imagens/Workshop Figma com IA_page-0001.jpg' },
+        { name: 'Workshop UX/UI (EBAC)', desc: '', imagem: '/imagens/Workshop UX_UI_page-0001.jpg' },
         { name: 'Administração Estratégica (IFRS)', desc: '', imagem: '/imagens/Administração_Estratégica-Certificado_digital_2825252_pages-to-jpg-0001.jpg' },
-        { name: 'Excel Básico (Bradesco)', desc: '', imagem: '/imagens/Excel Básico_page-0001.jpg' },
-        { name: 'Inglês Iniciante: Comunicação Essencial (Alura)', desc: '', imagem: '/imagens/Davi.alves.santos190 - Modulo Inglês Iniciante - Comunicação essencial -_page-0001.jpg' }
+        { name: 'Excel Básico (Bradesco)', desc: '', imagem: '/imagens/Excel Básico_page-0001.jpg' }
+        
   ]
 
   const allExtraCertificates = allCertificates.slice(MAX_CERTIFICATES);
@@ -47,22 +52,16 @@ const AboutMe = (props) => {
         {/* Coluna da Narrativa (Texto)*/}
         <div className="lg:w-3/5 space-y-8 text-lg sm:text-xl text-gray-300 leading-loose text-justify font-light">
           <p>
-            Minha jornada começou na área técnica com Edificações na ETEC, o que me deu 
-            uma base sólida em projetos e exatidão. Hoje, estou pivotando esse conhecimento 
-            lógico para o mundo digital, cursando <strong className="text-purple-400 font-semibold">Engenharia de Software na FIAP</strong>.
+            Minha jornada profissional é pautada pela exatidão e lógica. Iniciei no setor técnico com Edificações (ETEC), onde desenvolvi o rigor analítico que hoje aplico na <strong className="text-purple-400 font-semibold">Engenharia de Software na FIAP</strong>. Atualmente, foco em transformar dados em soluções inteligentes através do Python e arquiteturas de IA Generativa.
           </p>
           <p>
-            Atualmente atuo como Assistente Administrativo Financeiro na TPF Engecorps, 
-            onde desenvolvo soft skills essenciais como organização, gestão de tempo e trabalho 
-            em equipe. Paralelamente, dedico meus estudos ao desenvolvimento de software, 
-            focado em criar soluções eficientes.
+            No meu papel atual na TPF Engecorps, refino soft skills críticas como gestão de projetos e colaboração em equipe. Paralelamente, mergulho em RAG (Retrieval-Augmented Generation) e automação, construindo aplicações que não apenas funcionam, mas resolvem problemas complexos de negócios com eficiência.
           </p>
           
           {/* Destaque final com borda lateral */}
           <div className="border-l-4 border-purple-500 pl-6 py-2 bg-purple-900/10 rounded-r-lg">
             <p className="font-medium text-amber-100 italic">
-              "Busco transicionar para uma posição de Estágio ou Júnior em Desenvolvimento, 
-              trazendo a maturidade do ambiente corporativo somada à inovação acadêmica."
+              "Combinando a precisão do setor técnico com a maturidade do ambiente corporativo, foco em desenvolver aplicações de IA que geram valor real. Busco transicionar para desafios onde o Python e a inovação tecnológica sejam o motor da solução."
             </p>
           </div>
         </div>
@@ -73,20 +72,20 @@ const AboutMe = (props) => {
           
           {/* Card 1 */}
           <div className="group bg-gradient-to-br from-neutral-900 to-neutral-800 p-6 rounded-xl border border-purple-800/30 hover:border-purple-500 shadow-lg shadow-purple-900/10 hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1 active:border-purple-500 active:shadow-purple-500/20 active:-translate-y-1">
-            <span className="block text-purple-400 font-bold text-xs tracking-wider uppercase mb-2 group-hover:text-purple-300 group-active:text-purple-300">Front-end</span>
-            <p className="text-amber-50 text-lg font-medium">React, Tailwind, Front (JS, HTML e CSS)</p>
+            <span className="block text-purple-400 font-bold text-xs tracking-wider uppercase mb-2 group-hover:text-purple-300 group-active:text-purple-300">Back-end & AI</span>
+            <p className="text-amber-50 text-lg font-medium">Python (Pandas/NumPy), LangChain, Gemini API, RAG Architectures</p>
           </div>
 
           {/* Card 2 */}
           <div className="group bg-gradient-to-br from-neutral-900 to-neutral-800 p-6 rounded-xl border border-purple-800/30 hover:border-purple-500 shadow-lg shadow-purple-900/10 hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1 active:border-purple-500 active:shadow-purple-500/20 active:-translate-y-1">
-            <span className="block text-purple-400 font-bold text-xs tracking-wider uppercase mb-2 group-hover:text-purple-300 group-active:text-purple-300">Back-end</span>
-            <p className="text-amber-50 text-lg font-medium">Python, Node.js</p>
+            <span className="block text-purple-400 font-bold text-xs tracking-wider uppercase mb-2 group-hover:text-purple-300 group-active:text-purple-300">Full-stack Core</span>
+            <p className="text-amber-50 text-lg font-medium">Node.js, React, Tailwind CSS, JavaScript</p>
           </div>
 
           {/* Card 3 */}
           <div className="group bg-gradient-to-br from-neutral-900 to-neutral-800 p-6 rounded-xl border border-purple-800/30 hover:border-purple-500 shadow-lg shadow-purple-900/10 hover:shadow-purple-500/20 transition-all duration-300 transform hover:-translate-y-1 active:border-purple-500 active:shadow-purple-500/20 active:-translate-y-1">
-            <span className="block text-purple-400 font-bold text-xs tracking-wider uppercase mb-2 group-hover:text-purple-300 group-active:text-purple-300">Metodologias</span>
-            <p className="text-amber-50 text-lg font-medium">Design Thinking (UX/UI), Agile</p>
+            <span className="block text-purple-400 font-bold text-xs tracking-wider uppercase mb-2 group-hover:text-purple-300 group-active:text-purple-300">Data & Tools</span>
+            <p className="text-amber-50 text-lg font-medium">ChromaDB (Vector DB), Git, Agile, SQL</p>
           </div>
         </div>
 
