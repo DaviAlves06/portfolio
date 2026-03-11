@@ -12,7 +12,8 @@ const AboutMe = (props) => {
   const certificateContainerClasses = isViewingAll ? "max-h-[5000px] opacity-100": "max-h-0 opacity-0";
 
   const allCertificates = [
-        { name: 'Arquiteturas RAG com LLMs (Alura)', desc: '', imagem: '/imagens/Certificado Arquiteturas RAG com LLMs_page-0001.jpg' },
+        { name: 'Langchain - Técnicas avançadas de RAG (Alura)', desc: '', imagem: '/imagens/Certificado Arquiteturas RAG com LLMs_page-0001.jpg' },
+        { name: 'Arquiteturas RAG com LLMs (Alura)', desc: '', imagem: '/imagens/Davi - Curso LangChain_ Técnicas Avançadas de RAG - Alura_pages-to-jpg-0001.jpg' },
         { name: 'Inglês Iniciante: Comunicação Essencial (Alura)', desc: '', imagem: '/imagens/Davi.alves.santos190 - Modulo Inglês Iniciante - Comunicação essencial -_page-0001.jpg' },
         { name: 'React: Desenvolvendo com JavaScript (Alura)', desc: '', imagem: '/imagens/Davi - Curso React_ desenvolvendo com JavaScript - Alura_pages-to-jpg-0001.jpg' },
         { name: 'Lógica de Programação: Explore Funções e Listas (Alura)', desc: '', imagem: '/imagens/Davi - Curso Lógica de programação_ explore funções e listas - Alura (1)_page-0001.jpg' },
